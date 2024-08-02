@@ -36,7 +36,7 @@ function debounce(func, wait) {
 }
 
 function fetchRandomImages() {
-    const url = `https://api.unsplash.com/photos?client_id=${accessKey}&page=${page}&per_page=10`;
+    const url = `https://api.unsplash.com/photos?client_id=${accessKey}&page=${page}&per_page=30`;
     document.getElementById('loading-indicator').classList.remove('hidden');
     isLoading = true;
     fetch(url)
@@ -53,7 +53,7 @@ function fetchRandomImages() {
 }
 
 function searchImages(query) {
-    const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${accessKey}&page=${page}&per_page=10`;
+    const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${accessKey}&page=${page}&per_page=30`;
     document.getElementById('loading-indicator').classList.remove('hidden');
     isLoading = true;
     fetch(url)
@@ -98,6 +98,7 @@ function showImageDetails(image) {
 
 function closeImageDetails() {
     document.getElementById('image-details').classList.add('hidden');
+    document.getElementById('content-wrapper').classList.remove('blurred');
     document.getElementById('modal-overlay').classList.add('hidden');
     
     document.body.style.overflow = 'auto';

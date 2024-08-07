@@ -93,7 +93,7 @@ function showImageDetails(image) {
     document.body.style.overflow = 'hidden';
 
     document.getElementById('modal-overlay').addEventListener('click', closeImageDetails);
-    document.getElementById('close-detail').addEventListener('click', closeImageDetails);
+    document.getElementById('close-details').addEventListener('click', closeImageDetails);
 }
 
 function closeImageDetails() {
